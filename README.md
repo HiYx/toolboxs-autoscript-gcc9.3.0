@@ -1,5 +1,25 @@
 # toolboxs-autoscript-gcc9.3.0
-安装GCC-9.3.0全指导
+
+# 1、利用 ppa:ubuntu-toolchain-r/test 源安装gcc9.3.0
+一.安装如下命令可以安装g++9.3.0
+```
+ sudo apt-get update && \
+ sudo apt-get install build-essential software-properties-common -y && \
+ sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y && \
+ sudo apt-get update && \
+ sudo apt-get install gcc-snapshot -y && \
+ sudo apt-get update && \
+ sudo apt-get install gcc-9 g++-9 -y && \
+ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
+二.安装好g++9.3.0后保存默认的g++5
+ sudo apt-get install gcc-5 g++-5 -y && \
+ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /usr/bin/g++ g++ /usr/bin/g++-5;
+ ```
+
+
+
+
+# 2、安装GCC-9.3.0全指导
 
 
 
